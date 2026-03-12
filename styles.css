@@ -3,14 +3,32 @@ font-family:'Inter',sans-serif;
 margin:0;
 background:#f5f7fa;
 color:#1e293b;
+line-height:1.6;
 }
+
+/* TITULOS */
 
 h1,h2{
 font-family:'Playfair Display',serif;
+margin-bottom:20px;
 }
 
+h1{
+font-size:42px;
+font-weight:700;
+}
+
+h2{
+font-size:30px;
+font-weight:700;
+text-align:center;
+margin-bottom:40px;
+}
+
+/* HERO */
+
 .hero{
-background:linear-gradient(rgba(15,23,42,.8),rgba(15,23,42,.8)),
+background:linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),
 url('https://i.ibb.co/tTdJP7rK/ofi-003.jpg');
 background-size:cover;
 background-position:center;
@@ -21,44 +39,67 @@ color:white;
 
 .badge{
 background:#10b981;
-padding:6px 14px;
-border-radius:20px;
+padding:8px 16px;
+border-radius:30px;
 font-weight:600;
+font-size:14px;
 }
 
 .hero-info{
-margin-top:15px;
+margin-top:20px;
+font-size:18px;
 }
+
+/* BOTONES */
 
 .whatsapp-btn{
 display:inline-block;
 background:#25D366;
 color:white;
-padding:14px 28px;
+padding:14px 30px;
 border-radius:8px;
 text-decoration:none;
 font-weight:600;
 margin-top:25px;
+transition:.25s;
 }
+
+.whatsapp-btn:hover{
+background:#1fb055;
+transform:scale(1.03);
+}
+
+/* CONTENEDORES */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:50px 20px;
+padding:60px 20px;
 }
+
+/* CARD PRECIO */
 
 .card{
 background:white;
-padding:30px;
+padding:35px;
 border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 12px 35px rgba(0,0,0,.08);
+text-align:center;
 }
 
 .price{
 font-size:36px;
-font-weight:bold;
+font-weight:700;
 color:#10b981;
+margin-bottom:10px;
 }
+
+.price small{
+font-size:14px;
+color:#64748b;
+}
+
+/* GALERIA */
 
 .gallery{
 display:grid;
@@ -68,54 +109,107 @@ gap:15px;
 
 .gallery img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 cursor:pointer;
 transition:.3s;
 }
 
 .gallery img:hover{
-transform:scale(1.03);
+transform:scale(1.04);
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
+
+/* CARACTERISTICAS TIPO REAL ESTATE */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.feature{
+background:white;
+padding:22px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.feature strong{
+display:block;
+font-size:14px;
+color:#64748b;
+margin-bottom:6px;
+text-transform:uppercase;
+letter-spacing:.5px;
+}
+
+.feature.full{
+grid-column:1/-1;
+}
+
+/* VIDEO */
 
 .video-container{
 position:relative;
-padding-bottom:56%;
+padding-bottom:56.25%;
 height:0;
+border-radius:12px;
+overflow:hidden;
 }
 
 .video-container iframe{
 position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
 }
 
+/* MAPA */
+
 .map-container{
 position:relative;
-padding-bottom:56%;
+padding-bottom:56.25%;
 height:0;
+border-radius:12px;
+overflow:hidden;
+margin-top:20px;
 }
 
 .map-container iframe{
 position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
 border:0;
 }
 
+/* CTA FINAL */
+
 .cta{
 background:#0f172a;
 color:white;
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
 }
+
+.cta p{
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+/* WHATSAPP FLOAT */
 
 .whatsapp-float{
 position:fixed;
 bottom:25px;
 right:25px;
 background:#25D366;
-width:60px;
-height:60px;
+width:65px;
+height:65px;
 border-radius:50%;
 display:flex;
 align-items:center;
@@ -123,7 +217,10 @@ justify-content:center;
 color:white;
 font-size:28px;
 text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
+
+/* LIGHTBOX */
 
 .lightbox{
 position:fixed;
@@ -135,11 +232,13 @@ background:rgba(0,0,0,.9);
 display:none;
 align-items:center;
 justify-content:center;
+z-index:999;
 }
 
 .lightbox img{
 max-width:90%;
 max-height:85%;
+border-radius:10px;
 }
 
 .close{
@@ -154,7 +253,7 @@ cursor:pointer;
 .prev,.next{
 position:absolute;
 top:50%;
-font-size:40px;
+font-size:45px;
 color:white;
 cursor:pointer;
 }
