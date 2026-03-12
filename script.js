@@ -1,24 +1,63 @@
-function openWhatsApp(){
+let images = []
+let current = 0
 
-window.open(
-"https://wa.me/56987475287?text=Hola%2C%20me%20interesa%20la%20oficina%20205%20en%20Alameda%204050.%20%C2%BFPodr%C3%ADan%20enviarme%20m%C3%A1s%20informaci%C3%B3n%3F",
-"_blank"
-);
+document.addEventListener("DOMContentLoaded", () => {
 
-}
+images = Array.from(document.querySelectorAll(".gallery img"))
 
-function openImage(src){
+images.forEach((img,index)=>{
+img.addEventListener("click",()=>{
+openImage(index)
+})
+})
 
-const lightbox = document.getElementById("lightbox");
-const img = document.getElementById("lightbox-img");
+})
 
-img.src = src;
-lightbox.style.display = "flex";
+function openImage(index){
+
+current = index
+
+const lightbox = document.getElementById("lightbox")
+const lightboxImg = document.getElementById("lightbox-img")
+
+lightboxImg.src = images[current].src
+lightbox.style.display="flex"
 
 }
 
 function closeImage(){
+document.getElementById("lightbox").style.display="none"
+}
 
-document.getElementById("lightbox").style.display = "none";
+function nextImage(){
+
+current++
+
+if(current >= images.length){
+current = 0
+}
+
+document.getElementById("lightbox-img").src = images[current].src
+
+}
+
+function prevImage(){
+
+current--
+
+if(current < 0){
+current = images.length-1
+}
+
+document.getElementById("lightbox-img").src = images[current].src
+
+}
+
+function openWhatsApp(){
+
+window.open(
+"https://wa.me/56987475287?text=Hola%2C%20me%20interesa%20la%20oficina%20205%20en%20Alameda%204050",
+"_blank"
+)
 
 }
