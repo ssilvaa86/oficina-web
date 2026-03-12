@@ -260,3 +260,14 @@ cursor:pointer;
 
 .prev{left:30px;}
 .next{right:30px;}
+
+.urgency-bar{
+background:#dc2626;
+color:white;
+text-align:center;
+font-weight:600;
+padding:10px;
+letter-spacing:.3px;
+font-size:15px;
+}
+
