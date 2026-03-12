@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,7 +12,7 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -30,7 +31,7 @@ Ubicada en un polo empresarial estratégico del centro-poniente de Santiago.
 
 <p class="hero-info">
 📍 Oficina 205 – Alameda 4050 – Estación Central  
-🚇 Metro San Alberto Hurtado (Línea 1)
+🚇 Metro San Alberto Hurtado
 </p>
 
 <button onclick="openWhatsApp()">💬 Consultar por WhatsApp</button>
@@ -43,7 +44,7 @@ Ubicada en un polo empresarial estratégico del centro-poniente de Santiago.
 
 <div class="price">
 960 UF
-<small>≈ $38.2 millones CLP (referencial)</small>
+<small>≈ $38,2 millones CLP (referencial)</small>
 </div>
 
 <p>
@@ -62,14 +63,32 @@ acceso a transporte público, bancos, comercio y servicios.
 
 <div class="gallery">
 
-<img src="https://i.ibb.co/tTdJP7rK/ofi-003.jpg">
-<img src="https://i.ibb.co/cXXJpLHx/ofi-002.jpg">
-<img src="https://i.ibb.co/fYQ5ZT8c/o-FI-001.jpg">
-<img src="https://i.ibb.co/2YtT3dcv/Ofi15.jpg">
-<img src="https://i.ibb.co/C3VfRMsF/ofi13.jpg">
-<img src="https://i.ibb.co/YrNHLmy/ofi12.jpg">
-<img src="https://i.ibb.co/Ps7B4PwG/ofi11.jpg">
-<img src="https://i.ibb.co/Ld8jGTX1/ofi10.jpg">
+<img src="https://i.ibb.co/tTdJP7rK/ofi-003.jpg" onclick="openImage(this.src)">
+<img src="https://i.ibb.co/cXXJpLHx/ofi-002.jpg" onclick="openImage(this.src)">
+<img src="https://i.ibb.co/fYQ5ZT8c/o-FI-001.jpg" onclick="openImage(this.src)">
+<img src="https://i.ibb.co/2YtT3dcv/Ofi15.jpg" onclick="openImage(this.src)">
+<img src="https://i.ibb.co/C3VfRMsF/ofi13.jpg" onclick="openImage(this.src)">
+<img src="https://i.ibb.co/YrNHLmy/ofi12.jpg" onclick="openImage(this.src)">
+<img src="https://i.ibb.co/Ps7B4PwG/ofi11.jpg" onclick="openImage(this.src)">
+<img src="https://i.ibb.co/Ld8jGTX1/ofi10.jpg" onclick="openImage(this.src)">
+
+</div>
+
+</div>
+
+<div class="container">
+
+<h2>Recorrido Virtual</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/MhIvGXrl5lA?si=8tiQqKBkXkRWhAHS"
+title="Recorrido virtual oficina"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
 
 </div>
 
@@ -100,14 +119,11 @@ acceso a transporte público, bancos, comercio y servicios.
 
 <h2>Ubicación</h2>
 
-<div class="location-card">
+<div class="map-container">
 
-<p>
-📍 Alameda 4050 – Estación Central  
-🚇 Metro San Alberto Hurtado
-</p>
-
-<button onclick="openMaps()">🗺 Ver ubicación en Google Maps</button>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.8048604364517!2d-70.69201129999999!3d-33.4543902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c4f5233d1d93%3A0x4de619c626404eec!2sAv.%20Alameda%20Libertador%20Bernardo%20O'Higgins%204050%2C%20Estaci%C3%B3n%20Central%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1773356393219!5m2!1ses!2scl"
+loading="lazy">
+</iframe>
 
 </div>
 
@@ -124,6 +140,10 @@ Las oportunidades inmobiliarias bien ubicadas a este precio no duran mucho tiemp
 <button onclick="openWhatsApp()">Contactar por WhatsApp</button>
 
 </section>
+
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+<img id="lightbox-img">
+</div>
 
 <button onclick="openWhatsApp()" class="whatsapp-float">💬</button>
 
