@@ -7,11 +7,18 @@ window.open(
 
 }
 
-function openMaps(){
+function openImage(src){
 
-window.open(
-"https://maps.app.goo.gl/NJcWChhAF48HtTVv9",
-"_blank"
-);
+const lightbox = document.getElementById("lightbox");
+const img = document.getElementById("lightbox-img");
+
+img.src = src;
+lightbox.style.display = "flex";
+
+}
+
+function closeImage(){
+
+document.getElementById("lightbox").style.display = "none";
 
 }
